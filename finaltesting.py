@@ -233,10 +233,10 @@ def draw(folderName, videoName, modelName):
     x_train_silent, x_test = ProcessSilentData(temp, temp)
     x_train_eat, x_test = ProcessSilentData(temp, temp)
 
-    model4 = load_model('model/talking.h5')  # 还是两个点的silenttalking不要动摇
+    model4 = load_model('talking.h5')  # 还是两个点的silenttalking不要动摇
     r4 = model4.predict(x_train_silent)
 
-    model3 = load_model('model/confusing.h5')  # eating不要只搞两个点
+    model3 = load_model('confusing.h5')  # eating不要只搞两个点
     r3 = model3.predict(x_train_eat)
 
     # print(r4)
@@ -345,7 +345,7 @@ def main(argv):
     folder_name = argv[1]
     #video_name = 'test1.mp4'  # type your video path here, we want to know frame rate to create time labels
     video_name = argv[2]
-    model_name = 'model/ensemble.h5'  # type your model name here
+    model_name = 'ensemble.h5'  # type your model name here
     chart1 = draw(folder_name, video_name, model_name)  # return a frame/label chart and saved a time/label json file
     chart1.save_file('timeLabel')  # save the chart
     chart1.save_file('430000313')  # save the chart
