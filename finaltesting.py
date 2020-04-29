@@ -231,10 +231,10 @@ def draw(folderName, videoName, modelName):
     x_train_silent, x_test = ProcessSilentData(temp, temp)
     x_train_eat, x_test = ProcessSilentData(temp, temp)
 
-    model4 = load_model('model/talking.h5')  # 还是两个点的silenttalking不要动摇
+    model4 = load_model('talking.h5')  # 还是两个点的silenttalking不要动摇
     r4 = model4.predict(x_train_silent)
 
-    model3 = load_model('model/confusing.h5')  # eating不要只搞两个点
+    model3 = load_model('confusing.h5')  # eating不要只搞两个点
     r3 = model3.predict(x_train_eat)
 
     # print(r4)
@@ -335,43 +335,10 @@ def draw(folderName, videoName, modelName):
 
 folder_name = 'test1'  # type your folder path here, which contains openpose json files
 video_name = 'test1.mp4'  # type your video path here, we want to know frame rate to create time labels
-model_name = 'model/ensemble.h5'  # type your model name here
+model_name = 'ensemble.h5'  # type your model name here
 chart1 = draw(folder_name, video_name, model_name)  # return a frame/label chart and saved a time/label json file
 chart1.save_file('chart_for_video_' + video_name)  # save the chart
 chart1
 
 # %%
 
-folder_name = 'test2'  # type your folder path here, which contains openpose json files
-video_name = 'test2.mp4'  # type your video path here, we want to know frame rate to create time labels
-model_name = 'model/ensemble.h5'  # type your model name here
-chart2 = draw(folder_name, video_name, model_name)  # return a frame/label chart and saved a time/label json file
-chart2.save_file('chart_for_video_' + video_name)  # save the chart
-chart2
-
-# %%
-
-folder_name = 'test3'  # type your folder path here, which contains openpose json files
-video_name = 'test3.mp4'  # type your video path here, we want to know frame rate to create time labels
-model_name = 'model/ensemble.h5'  # type your model name here
-chart3 = draw(folder_name, video_name, model_name)  # return a frame/label chart and saved a time/label json file
-chart3.save_file('chart_for_video_' + video_name)  # save the chart
-chart3
-
-# %%
-
-folder_name = 'test4'  # type your folder path here, which contains openpose json files
-video_name = 'test4.mp4'  # type your video path here, we want to know frame rate to create time labels
-model_name = 'model/ensemble.h5'  # type your model name here
-chart4 = draw(folder_name, video_name, model_name)  # return a frame/label chart and saved a time/label json file
-chart4.save_file('chart_for_video_' + video_name)  # save the chart
-chart4
-
-# %%
-
-folder_name = 'test5'  # type your folder path here, which contains openpose json files
-video_name = 'test5.mp4'  # type your video path here, we want to know frame rate to create time labels
-model_name = 'model/ensemble.h5'  # type your model name here
-chart5 = draw(folder_name, video_name, model_name)  # return a frame/label chart and saved a time/label json file
-chart5.save_file('chart_for_video_' + video_name)  # save the chart
-chart5
