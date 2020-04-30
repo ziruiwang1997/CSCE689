@@ -1,10 +1,4 @@
 # CSCE689
-Just use sub6_test_ensemble.ipynb to test on new videos, the rest codes are processing data and trainning model
+please download models at :https://drive.google.com/file/d/1KHtb-maJ6__fzjYWDvsdCF8ohCnspCbl/view?usp=sharing
 
-https://drive.google.com/open?id=1D8xDrP2301UnsFlDBwTv_OGlpiVHWfaH
-please put the models with in the same folders with codes.
-
-https://youtu.be/IOdHsla3T94
-Code demo: The process to test my old model and the new ensemble model is identical
-
-If you have problems, please email ziruiwang@tamu.edu
+scripts are submitted through ecampus, please see the user manual to run the code 
